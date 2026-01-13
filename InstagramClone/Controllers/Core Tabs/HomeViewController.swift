@@ -64,12 +64,76 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        5
+        return feedRenderModel.count * 4
     }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        let x = section
+//        let model : FeedRenderViewModel
+//        if x == 0{
+//            model = feedRenderModel[0]
+//        }
+//        else {
+//            let position = x % 4 == 0 ? x/4 : (x - (x % 4)/4)
+//            model = feedRenderModel[position]
+//        }
+//        
+//        let subSection = x % 4
+//        
+//        if subSection == 0 {
+//            //header
+//            
+//            return 1
+//        }
+//        else if subSection == 1 {
+//            // post
+//            
+//            return 1
+//        }
+//        else if subSection == 2 {
+//            // actions
+//            
+//            return 1
+//        }
+//        else if subSection == 3 {
+//            // comments
+//            
+//            let commentModel = model.comments
+//            switch commentModel.renderType {
+//            case .comments(let provider): return provider.count > 2 ? 2 : provider.count
+//            @unknown default : fatalError("Invalid case")
+//                
+//            default:
+//                   return 1
+//            }
+//       
+//        }
+//    }
+//
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+
+        let position = section / 4
+        let model = feedRenderModel[position]
+        let subSection = section % 4
+
+        switch subSection {
+        case 0: // header
+            return 1
+        case 1: // post
+            return 1
+        case 2: // actions
+            return 1
+        case 3: // comments
+            switch model.comments.renderType {
+            case .comments(let provider):
+                return min(provider.count, 2)
+            @unknown default:
+                return 0
+            }
+        default:
+            return 1
+        }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: IGFeedPostTableViewCell.identifier, for: indexPath) as? IGFeedPostTableViewCell else {
             return UITableViewCell()

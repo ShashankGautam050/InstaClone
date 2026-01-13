@@ -20,28 +20,28 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "33403584-1483-4D83-A466-9930B6E3FF16 - a4c6432b36d80477"
+                  uuid = "33403584-1483-4D83-A466-9930B6E3FF16 - 4c5c30e49dd25934"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "InstagramClone.DatabaseManager.insertNewUser(with: Swift.String, userName: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "InstagramClone.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shashankgautam/Projects/InstagramClone/InstagramClone/Resources/DatabaseManager.swift"
+                  urlString = "file:///Users/shashankgautam/InstagramClone/InstagramClone/Resources/DatabaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
                   endingLineNumber = "29">
                </Location>
                <Location
-                  uuid = "33403584-1483-4D83-A466-9930B6E3FF16 - 64a0163e3807ab4f"
+                  uuid = "33403584-1483-4D83-A466-9930B6E3FF16 - 8c3a65f1930df7f2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 @Sendable (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in InstagramClone.DatabaseManager.insertNewUser(with: Swift.String, userName: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "InstagramClone.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shashankgautam/Projects/InstagramClone/InstagramClone/Resources/DatabaseManager.swift"
+                  urlString = "file:///Users/shashankgautam/InstagramClone/InstagramClone/Resources/DatabaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"

@@ -70,7 +70,7 @@ final class NotificationViewController: UIViewController {
 
     // MARK: - Data
     private func fetchNotifications() {
-
+        let user = Users(userName: "halley", bio: "", name: (first:" ", last: " "), birthDate: Date(), gender: .male, counts: Counts(followedBy: 1, follows: 2, post: 4), profilePhoto: URL(string: "https//www.google.com")!, joinDate: Date())
         let post = PhotoPost(
             identifier: "",
             thumbnailImage: URL(string: "https://www.google.com")!,
@@ -81,8 +81,10 @@ final class NotificationViewController: UIViewController {
             creationDate: Date(),
             photoType: .photo,
             taggedUsers: [],
-            owner: Users(userName: "halley", bio: "", name: (first:" ", last: " "), birthDate: Date(), gender: .male, counts: Counts(followedBy: 1, follows: 2, post: 4), profilePhoto: URL(string: "https//www.google.com")!, joinDate: Date())
+            owner: user
         )
+        
+     
 
         for x in 0...100 {
             let model = UserNotification(
